@@ -2,7 +2,7 @@
 
 A PowerShell automation tool that monitors Active Directory user accounts for upcoming password expiration and outputs actionable data for notifications, reporting, or SIEM ingestion.
 
-## 🚀 Overview
+## Overview
 
 Expired passwords are a common cause of help desk tickets, account lockouts, and productivity loss.  
 This script queries Active Directory for users whose passwords are expired or nearing expiration and produces structured output suitable for:
@@ -18,7 +18,7 @@ Built for modern Active Directory environments using the computed attribute:
 
 ---
 
-## ✨ Features
+## Features
 
 - Detects expired passwords
 - Identifies users nearing expiration (configurable thresholds)
@@ -30,7 +30,7 @@ Built for modern Active Directory environments using the computed attribute:
 
 ---
 
-## 🧰 Requirements
+## Requirements
 
 - Windows PowerShell 5.1+ or PowerShell 7+
 - Active Directory module (RSAT)
@@ -44,13 +44,13 @@ Add-WindowsCapability -Online -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0
 
 ---
 
-## 📂 Script
+## Script
 
 **Notify-ADPasswordExpiry.ps1**
 
 ---
 
-## ⚙️ Usage
+## Usage
 
 ### Basic Run
 
@@ -84,7 +84,7 @@ Add-WindowsCapability -Online -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0
 
 ---
 
-## 📊 Example Output
+## Example Output
 
 ```text
 Name            : John Doe
@@ -99,7 +99,7 @@ Status          : ExpiringSoon-7
 
 ---
 
-## 📤 Export to CSV
+## Export to CSV
 
 ```powershell
 .\Notify-ADPasswordExpiry.ps1 |
@@ -108,7 +108,7 @@ Export-Csv .\PasswordExpiryReport.csv -NoTypeInformation
 
 ---
 
-## 📧 Email Report Example
+## Email Report Example
 
 ```powershell
 $report = .\Notify-ADPasswordExpiry.ps1
@@ -126,7 +126,7 @@ Send-MailMessage `
 
 ---
 
-## 📡 Syslog / SIEM Integration Example
+## Syslog / SIEM Integration Example
 
 ```powershell
 .\Notify-ADPasswordExpiry.ps1 |
@@ -140,7 +140,7 @@ ForEach-Object {
 
 ---
 
-## ⏰ Scheduling
+## Scheduling
 
 This script is designed to run as a scheduled task.
 
@@ -157,7 +157,7 @@ Arguments: -File "C:\Scripts\Notify-ADPasswordExpiry.ps1"
 
 ---
 
-## 🔐 Security Considerations
+## Security Considerations
 
 - Requires read access to Active Directory user attributes
 - Avoid sending reports externally without data review
@@ -166,7 +166,7 @@ Arguments: -File "C:\Scripts\Notify-ADPasswordExpiry.ps1"
 
 ---
 
-## 🛣️ Roadmap
+## Roadmap
 
 Planned enhancements:
 
@@ -179,18 +179,18 @@ Planned enhancements:
 
 ---
 
-## 📜 License
+## License
 
-MIT License — free to use and modify.
+MIT License - free to use and modify.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Pull requests welcome. Suggestions and improvements are encouraged.
 
 ---
 
-## 👤 Author
+## Author
 
 Created by an infrastructure & automation engineer focused on improving identity hygiene and operational efficiency.
